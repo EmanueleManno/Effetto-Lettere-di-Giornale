@@ -1,0 +1,79 @@
+/*Importazione del font Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/*Stile applicato a tutti gli elementi*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Stile del corpo della pagina*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+/*Stile della lista*/
+ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*Stile degli elementi della lista*/
+ul li {
+    list-style-type: none;
+}
+
+/*Testo della lista*/
+ul li .text {
+    font-size: 4em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 800;
+    line-height: 1em;
+    display: flex;
+    align-items: center;
+}
+
+/*Tranne il primo span*/
+ul li .text span:not(:first-child) {
+    letter-spacing: 0.1em;
+}
+
+/*Stile degli span*/
+ul li .text span {
+    position: relative;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    transition: 1s;
+    transform: rotateX(0deg);
+}
+
+/*Stile del primo span della lista*/
+ul li .text span:nth-child(1) {
+    width: 70px;
+    height: 70px;
+    background: var(--clr);
+    color: #222;
+    -webkit-text-stroke: 0px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+/*Tranne il primo span stile del resto in hover sul testo*/
+ul li .text:hover span:not(:first-child) {
+    color: var(--clr);
+    transition: 1s;
+    transform: rotateX(360deg);
+    -webkit-text-stroke: 1px transparent;
+}
